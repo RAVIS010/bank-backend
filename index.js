@@ -6,7 +6,11 @@ const cors = require('cors');
 const accountRoutes = require('./routes/accounts');
 
 const app = express();
-app.use(cors({ origin: '*', methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'] }));
+app.use(cors({ origin: [
+    'http://localhost:3000',
+    "https://bank-frontend-ruby.vercel.app"
+    
+], methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'] }));
 app.use(express.json());
 
 const PORT = process.env.PORT || 1337;
