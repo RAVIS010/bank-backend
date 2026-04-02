@@ -8,7 +8,8 @@ const accountRoutes = require('./routes/accounts');
 const app = express();
 app.use(cors({ origin: [
     'http://localhost:3000',
-    "https://bank-frontend-ruby.vercel.app"
+    "https://bank-frontend-ruby.vercel.app",
+    "https://bank-backend-rho.vercel.app"
     
 ], methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'] }));
 app.use(express.json());
